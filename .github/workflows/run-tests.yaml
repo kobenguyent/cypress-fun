@@ -11,7 +11,7 @@ jobs:
 
       # https://github.com/cypress-io/github-action
       - name: Cypress run 🚀
-        uses: cypress-io/github-action@v3
+        uses: cypress-io/github-action@v4
 
       # you can use Cypress Dashboard to store the screenshots
       # or store them on GitHub and download the zip file

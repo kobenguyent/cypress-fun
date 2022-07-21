@@ -3,18 +3,16 @@ name: Run Tests
 on: [push]
 
 jobs:
-  build:
+  checkout-and-test:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [12.x]
-
     steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: run cypress tests with firefox
+        uses: cypress-io/github-action@v2
+        timeout-minutes: 10
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm i
-      - run: npm run api-tests
+          browser: chrome

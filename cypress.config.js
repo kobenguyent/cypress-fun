@@ -6,6 +6,6 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     chromeWebSecurity: false,
-    specPattern: 'cypress/**/**/*.ts'
+    specPattern: 'cypress/**/**/*.cy.ts'
   },
 });

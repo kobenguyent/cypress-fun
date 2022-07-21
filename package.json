@@ -10,7 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "api-tests": "cypress run --spec cypress/integration/**"
+    "api-tests": "cypress run --spec cypress/integration/**",
+    "e2e-tests": "cypress run --spec cypress/e2e/**/"
   },
   "keywords": [
     "cypress",

@@ -8,9 +8,9 @@ This project brings you some fun with E2E and API tests using Cypress.
 
 This test uses a number of open source projects to work properly:
 
-*<https://nodejs.org/en/> - evented I/O for the backend
-*<https://cypress.io/> - Cypress
-*<https://reqres.in/> - Endpoints that are used in this project
+* [https://nodejs.org/en/](https://nodejs.org/en/) - evented I/O for the backend
+* [https://cypress.io/](https://cypress.io/) - Cypress
+* [https://reqres.in/](https://reqres.in/) - Endpoints that are used in this project
 
 ### Installation
 
@@ -55,7 +55,7 @@ Couldn't find tsconfig.json. tsconfig-paths will be skipped
 
 
 ────────────────────────────────────────────────────────────────────────────────────────────────────
-                                                                                                    
+                                                                                                  
   Running:  getUser.cy.ts                                                                   (1 of 1)
 
 
@@ -85,9 +85,9 @@ Couldn't find tsconfig.json. tsconfig-paths will be skipped
 
   (Video)
 
-  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Started processing:  Compressing to 32 CRF                                                   
   -  Finished processing: /Users/thanh/Desktop/cypress-fun/cypress/videos/getU    (0 seconds)
-                          ser.cy.ts.mp4                                                             
+                          ser.cy.ts.mp4                                                           
 
 
 ====================================================================================================
@@ -100,4 +100,74 @@ Couldn't find tsconfig.json. tsconfig-paths will be skipped
   │ ✔  getUser.cy.ts                            264ms        3        3        -        -        - │
   └────────────────────────────────────────────────────────────────────────────────────────────────┘
     ✔  All specs passed!                        264ms        3        3        -        -        -  
+```
+
+### How to trigger E2E tests
+
+To run all api tests just simply type
+
+```sh
+npm run e2e-tests
+```
+
+Example output
+
+```sh
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        10.3.1                                                                         │
+  │ Browser:        Electron 100 (headless)                                                        │
+  │ Node Version:   v14.18.2 (/Users/thanh/.nvm/versions/node/v14.18.2/bin/node)            │
+  │ Specs:          1 found (login.cy.ts)                                                          │
+  │ Searched:       cypress/e2e, cypress/e2e/login                                                 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                  
+  Running:  login.cy.ts                                                                     (1 of 1)
+
+
+  Login
+    ✓ login successfully (5055ms)
+
+
+  1 passing (8s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     7 seconds                                                                        │
+  │ Spec Ran:     login.cy.ts                                                                      │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                   
+  -  Finished processing: /Users/thanh/Desktop/cypress-fun/cypress/videos/logi    (0 seconds)
+                          n.cy.ts.mp4                                                             
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  login.cy.ts                              00:07        1        1        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✔  All specs passed!                        00:07        1        1        -        -        -  
 ```

@@ -3,16 +3,14 @@ name: Run Tests
 on: [push]
 
 jobs:
-  checkout-and-test:
-    runs-on: ubuntu-latest
+  basic-ubuntu-20-v10:
+    runs-on: ubuntu-20.04
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-
-      - name: Check out repository code
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: run cypress tests with chrome
-        uses: cypress-io/github-action@v2
-        timeout-minutes: 10
+      - name: Cypress tests
+        uses: ./
         with:
-          browser: chrome
+          working-directory: examples/v10/basic
+          build: npx cypress info
